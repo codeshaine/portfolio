@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import CommandArea from "./CommandArea";
 
 export default function Terminal() {
+  const navigate = useNavigate();
   return (
     <div className="font-mono text-[#e0def4] bg-[#191724] flex justify-center lg:w-screen  lg:h-screen w-screen h-screen text-sm lg:text-base md:text-base ">
       <div className="lg:w-8/12 m-4 w-11/12 md:w-10/12 border-white border border-b-4  rounded-2xl">
@@ -13,6 +15,7 @@ export default function Terminal() {
             <div
               className="w-3.5 h-3.5 rounded-full bg-[#f7768e] hover:bg-red-500"
               title="Close"
+              onClick={() => navigate("/")}
             ></div>
             <div
               className="w-3.5 h-3.5 rounded-full bg-[#e0af68] hover:bg-yellow-500"

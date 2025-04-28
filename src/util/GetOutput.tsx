@@ -5,10 +5,12 @@ import {
   FaTwitter,
   FaLinkedin,
   FaEnvelope,
+  FaCalendar,
 } from "react-icons/fa";
+import { experience, projects, skills } from "../data/personal";
 export function GetOutput(
   command: string,
-  setCommandList: React.Dispatch<React.SetStateAction<Command[]>>
+  setCommandList: React.Dispatch<React.SetStateAction<Command[]>>,
 ): JSX.Element | "" {
   switch (command.toLowerCase().trim()) {
     case "clear":
@@ -68,94 +70,51 @@ export function GetOutput(
           </div>
         </div>
       );
-    case "goals":
+
+    case "experience":
       return (
         <div className="">
-          <ul className="list-disc list-inside">
-            <li className="m-2 text-[#31748f]">
-              gaining{" "}
-              <span className="text-[#f6c177]">Industry Experience</span>
-            </li>
-            <li className="m-2 text-[#31748f]">
-              Making meaningful{" "}
-              <span className="text-[#f6c177]">open source</span> contributions
-            </li>
-            <li className="m-2 text-[#31748f]">
-              Explore and Excel{" "}
-              <span className="text-[#f6c177]">system design</span> and{" "}
-              <span className="text-[#f6c177]">cloud technologies</span>
-            </li>
-            <li className="m-2 text-[#31748f]">
-              learning{" "}
-              <span className="text-[#f6c177]">terminal applications</span>{" "}
-              development with golang
-            </li>
-          </ul>
-          <p className=" ">
-            Last updated on <span className="text-[#f6c177]">2-12-2024</span>
-          </p>
+          {experience.map((item, index) => (
+            <div
+              key={index}
+              className="bg-gradient-to-r from-[#292639] to-[#2b5e72] p-6 rounded-lg mb-6 border-b-4 border-b-[#f6c177] hover:shadow-lg transition-shadow duration-300"
+            >
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                <p className="text-[#f6c177] text-2xl font-bold">
+                  {item.role}
+                  <span className="text-[#f6c177]/70 text-xl font-semibold ml-1">
+                    {" "}
+                    @{item.company}
+                  </span>
+                </p>
+
+                <span className="text-[#9ccfd8] text-sm mt-2 md:mt-0">
+                  {item.period}
+                </span>
+              </div>
+
+              <ul className="list-disc list-inside text-[#c4a7e7] mb-4 space-y-2">
+                {item.description.map((point, idx) => (
+                  <li key={idx}>{point}</li>
+                ))}
+              </ul>
+
+              <div className="flex flex-wrap gap-2">
+                {item.technologies.map((tech, idx) => (
+                  <span
+                    key={idx}
+                    className="bg-[#2e3440] text-[#c4a7e7] px-3 py-1 rounded-lg shadow-md text-sm"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       );
-    case "projects":
-      const projects = [
-        {
-          projName: "Carter – Full-Stack E-Commerce Platform",
-          shortDesc:
-            "A full-featured e-commerce application built with modern web technologies.",
-          gbLink: "https://github.com/codeshaine/carter",
-          liveLink: "",
-          techTags: [
-            "React",
-            "Node.js",
-            "Express",
-            "Prisma",
-            "PostgreSQL",
-            "Redis",
-            "Passport.js",
-          ],
-        },
-        {
-          projName: "Ekashunyam Fest Website",
-          shortDesc:
-            "Dynamic inter-college fest website for event registration and management with JWT authentication.",
-          gbLink: "https://github.com/axioz-dev",
-          liveLink: "https://ekashunyam.tech/",
-          techTags: [
-            "React",
-            "Express",
-            "MongoDB",
-            "Tailwind",
-            "AWS",
-            "JWT",
-            "GSAP",
-          ],
-        },
-        {
-          projName: "Joke API",
-          shortDesc:
-            "A simple API for managing jokes with CRUD operations and Docker containerization.",
-          gbLink: "https://github.com/codeshaine/joke-api",
-          liveLink: "",
-          techTags: ["Express", "Docker"],
-        },
-        {
-          projName: "URL Shortener",
-          shortDesc:
-            "A URL shortening service built with Go, PostgreSQL, and Chi for routing, with click tracking and expiration functionality.",
-          gbLink: "https://github.com/codeshaine/url-shortner",
-          liveLink: "",
-          techTags: ["Go", "PostgreSQL", "Chi", "Docker"],
-        },
-        {
-          projName: "CLI TODO Application",
-          shortDesc:
-            "A command-line TODO application written in Go to manage tasks with add, complete, delete, and list functionalities.",
-          gbLink: "https://github.com/codeshaine/go-todo-app",
-          liveLink: "",
-          techTags: ["Go", "CLI"],
-        },
-      ];
 
+    case "projects":
       return (
         <div className="">
           {projects.map((item, index) => {
@@ -220,43 +179,7 @@ export function GetOutput(
     case "skills":
       return (
         <div>
-          {[
-            {
-              heading: "Languages",
-              skills: ["JavaScript", "TypeScript", "Go", "C++", "HTML/CSS"],
-            },
-            {
-              heading: "Frameworks & Libraries",
-              skills: [
-                "Node.js",
-                "Express",
-                "React",
-                "Next.js",
-                "Tailwind CSS",
-                "Prisma",
-                "Mongoose",
-                "Jest",
-                "Vitest",
-              ],
-            },
-            {
-              heading: "Tools,Platforms & Databases",
-              skills: [
-                "Git",
-                "GitHub",
-                "MongoDb",
-                "PostgreSQL",
-                "Docker",
-                "AWS EC2",
-                "AWS S3",
-                "Netlify",
-                "GitHub WorkFlow(CI/CD)",
-                "Vercel",
-                "Linux",
-                "neovim",
-              ],
-            },
-          ].map((section) => (
+          {skills.map((section) => (
             <div key={section.heading} className="mb-4">
               <h2 className="text-lg lg:text-xl md:text-xl mb-2 text-[#f6c177]">
                 {section.heading}
@@ -308,6 +231,12 @@ export function GetOutput(
               username: "shainilps.work@gmail.com",
               icon: <FaEnvelope />,
             },
+            {
+              social: "Book a Call",
+              link: "https://calendly.com/codeshaine/30min",
+              username: "book now",
+              icon: <FaCalendar />,
+            },
           ].map((item) => {
             return (
               <div className="flex items-center mb-2">
@@ -352,16 +281,16 @@ export function GetOutput(
                 desc: "- My Professional journey",
               },
               {
-                comm: "goals",
-                desc: "- Explore my interests",
-              },
-              {
                 comm: "blogs",
                 desc: "- A collection of my thoughts and occasional rants",
               },
               {
                 comm: "clear",
                 desc: "- Clear the Terminal",
+              },
+              {
+                comm: "exit",
+                desc: "- Go back to GUI",
               },
               {
                 comm: "sudo rm -rf /*",
@@ -380,6 +309,9 @@ export function GetOutput(
           </div>
         </>
       );
+    case "exit":
+      window.location.href = "/";
+      return "";
     case "sudo rm -rf /*":
       const newWindow = window.open("about:blank", "_blank");
       if (newWindow) {

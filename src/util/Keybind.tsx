@@ -8,7 +8,7 @@ export default function handleKeyDown(
   currentIndex: number,
   setCommandList: React.Dispatch<React.SetStateAction<Command[]>>,
   setCurrentCommand: React.Dispatch<React.SetStateAction<string>>,
-  setCurrentIndex: React.Dispatch<React.SetStateAction<number>>
+  setCurrentIndex: React.Dispatch<React.SetStateAction<number>>,
 ) {
   if (e.key === "Enter") {
     const newCommand: Command = {
@@ -61,6 +61,10 @@ export default function handleKeyDown(
       setCurrentCommand("sudo rm -rf /*");
     } else if (currentCommand.toLowerCase().startsWith("h")) {
       setCurrentCommand("help");
+    } else if (currentCommand.toLowerCase().startsWith("exi")) {
+      setCurrentCommand("exit");
+    } else if (currentCommand.toLowerCase().startsWith("exp")) {
+      setCurrentCommand("experience");
     }
   }
 }
