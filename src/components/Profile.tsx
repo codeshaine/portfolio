@@ -23,7 +23,7 @@ export default function Profile({
             {name}
           </h1>
 
-          <div className="transition-all hover:pt-[0.15rem] hover:border-b-4 border-red-800 bg-red-400 duration-100 cursor-grab text-white text-xs px-2 py-1 rounded-full mt-2 md:mt-0">
+          <div className="transition-all hover:pt-[0.15rem] hover:border-b-4 border-red-800 bg-red-400 duration-100 cursor-grab text-white text-xs px-2 py-1 rounded-full mt-2 md:mt-0 ">
             Open for Work
           </div>
         </div>
@@ -36,7 +36,7 @@ export default function Profile({
               href={social.calendar}
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-all hover:pt-[0.40rem] hover:border-b-4 hover:bg-white hover:text-cblack hover:dark:bg-cblack hover:dark:text-white hover:border-slate-400 px-4 py-2 text-xs font-medium bg-cblack text-white dark:bg-white dark:text-cblack rounded-md shadow-sm border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
+              className="transition-all hover:pt-[0.40rem] hover:border-b-4 hover:bg-white hover:text-cblack hover:dark:bg-cblack hover:dark:text-white hover:border-slate-400 px-4 py-2 text-xs font-medium bg-cblack text-white dark:bg-white dark:text-cblack rounded-md shadow-sm border border-gray-200 dark:border-gray-700"
               title="Schedule a call"
             >
               Schedule a call
@@ -46,7 +46,7 @@ export default function Profile({
             <a
               href={social.resume}
               download
-              className="transition-all hover:pt-[0.40rem] hover:border-b-4 hover:border-slate-400 px-4 py-2 text-xs font-medium bg-white text-gray-700 dark:bg-cblack dark:text-gray-300 rounded-md shadow-sm border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
+              className="transition-all hover:pt-[0.40rem] hover:border-b-4 hover:border-slate-400 px-4 py-2 text-xs font-medium bg-white text-gray-700 dark:bg-cblack dark:text-gray-300 rounded-md shadow-sm border border-gray-200 dark:border-gray-700 "
               title="Resume"
             >
               Resume
@@ -57,7 +57,7 @@ export default function Profile({
               href={social.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-all hover:pb-[0.15rem] hover:border-b-4 hover:border-slate-400 w-9 h-9 bg-white dark:bg-cblack flex items-center justify-center rounded-md border border-gray-200 dark:border-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
+              className="transition-all hover:pb-[0.15rem] hover:border-b-4 hover:border-slate-400 w-9 h-9 bg-white dark:bg-cblack flex items-center justify-center rounded-md border border-gray-200 dark:border-gray-700 shadow-sm"
               title="GitHub"
             >
               <FaGithub className="text-gray-700 dark:text-gray-300" />
@@ -68,7 +68,7 @@ export default function Profile({
               href={"mailto:" + social.email}
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-all hover:pb-[0.15rem] hover:border-b-4 hover:border-slate-400 w-9 h-9 bg-white dark:bg-cblack flex items-center justify-center rounded-md border border-gray-200 dark:border-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
+              className="transition-all hover:pb-[0.15rem] hover:border-b-4 hover:border-slate-400 w-9 h-9 bg-white dark:bg-cblack flex items-center justify-center rounded-md border border-gray-200 dark:border-gray-700 shadow-sm "
               title="Email"
             >
               <FaEnvelope className="text-gray-700 dark:text-gray-300" />
@@ -79,7 +79,7 @@ export default function Profile({
               href={social.twitter}
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-all hover:pb-[0.15rem] hover:border-b-4 hover:border-slate-400 w-9 h-9 bg-white dark:bg-cblack flex items-center justify-center rounded-md border border-gray-200 dark:border-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
+              className="transition-all hover:pb-[0.15rem] hover:border-b-4 hover:border-slate-400 w-9 h-9 bg-white dark:bg-cblack flex items-center justify-center rounded-md border border-gray-200 dark:border-gray-700 shadow-sm "
               title="Twitter"
             >
               <FaTwitter className="text-gray-700 dark:text-gray-300" />
@@ -90,7 +90,7 @@ export default function Profile({
               href={social.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-all hover:pb-[0.15rem] hover:border-b-4 hover:border-slate-400 w-9 h-9 bg-white dark:bg-cblack flex items-center justify-center rounded-md border border-gray-200 dark:border-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
+              className="transition-all hover:pb-[0.15rem] hover:border-b-4 hover:border-slate-400 w-9 h-9 bg-white dark:bg-cblack flex items-center justify-center rounded-md border border-gray-200 dark:border-gray-700 shadow-sm "
               title="LinkedIn"
             >
               <FaLinkedin className="text-gray-700 dark:text-gray-300" />
@@ -101,7 +101,7 @@ export default function Profile({
               href={social.blog}
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-all hover:pb-[0.15rem] hover:border-b-4 hover:border-slate-400 w-9 h-9 bg-white dark:bg-cblack flex items-center justify-center rounded-md border border-gray-200 dark:border-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
+              className="transition-all hover:pb-[0.15rem] hover:border-b-4 hover:border-slate-400 w-9 h-9 bg-white dark:bg-cblack flex items-center justify-center rounded-md border border-gray-200 dark:border-gray-700 shadow-sm "
               title="Writing"
             >
               <FaBookOpen className="text-gray-700 dark:text-gray-300" />
