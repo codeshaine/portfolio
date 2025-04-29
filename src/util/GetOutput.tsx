@@ -262,12 +262,11 @@ export function GetOutput(
             <p className="text-[#c4a7e7] col-span-2">All available commands:</p>
             {[
               { comm: "about", desc: "- Learn more about me" },
-
               {
                 comm: "projects",
                 desc: "- A glimpse into my work!",
               },
-
+              { comm: "experience", desc: "- Learn about my exp points" },
               {
                 comm: "skills",
                 desc: "- Checkout my technical skills",
