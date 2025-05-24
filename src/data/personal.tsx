@@ -10,6 +10,25 @@ export function Link({ text, link }: { text: string; link: string }) {
 
 export const tilCategories: TILCategory[] = [
   {
+    date: "May 2025",
+    learned: [
+      <>
+        Joined <Link text="Timechain Labs" link="https://timechainlabs.io" /> as
+        Backend Intern
+      </>,
+      <>
+        Started to working on{" "}
+        <Link text="drakai" link="https://drakai.netlify.app" />
+      </>,
+      <>
+        Learnt about{" "}
+        <Link text="BSV Blockchain" link="https://docs.bsvblockchain.org/" /> by
+        company
+      </>,
+      <>Started Learning about Solana and Etherium</>,
+    ],
+  },
+  {
     date: "April 2025",
     learned: [
       <>
@@ -183,16 +202,11 @@ export const projects: Project[] = [
 
 export const experience: ExperienceItem[] = [
   {
-    company: "Codelab Systems",
-    role: "Mern Stack Intern",
-    period: "Dec 2024 - Dec 2024",
-    description: [
-      "Learned about mern stack by the instructors",
-      "Developed React based application with react hooks",
-      "Develped a E-Commerce rip off for the company",
-      "Learned about deployment, web securities and many more",
-    ],
-    technologies: ["JavaScript", "React", "Node.js", "Vercel"],
+    company: "TimeChain Labs",
+    role: "Goalng Developer Intern",
+    period: "May 2025 - Present",
+    description: ["Working on Project Neucron", "Working on Project Assetizer"],
+    technologies: ["Go", "Backend"],
   },
 ];
 
